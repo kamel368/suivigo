@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
   <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+    <h3><span id="suivi-orange">Suivi</span><span id="go">Go</span></h3>
     <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,8 +26,12 @@
           </div>
         </li>
       <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        <li class="nav-item d-flex">
+
+          <%= link_to "Gérant", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Enseignant", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Eleve", new_user_session_path, class: "nav-link" %>
+          <button type="button" class="btn btn-danger">Découvrir</button>
         </li>
       <% end %>
     </ul>
